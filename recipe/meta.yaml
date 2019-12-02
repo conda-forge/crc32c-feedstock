@@ -1,5 +1,5 @@
 {% set name = "crc32c" %}
-{% set version = "1.7" %}
+{% set version = "2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bdcd28f26b62838919480d465a0d166207a36c4f104102a0b6edf5b498544d36
+  sha256: 2cb2076843feffbbffd9a8d7e87b58f0b430872c083eab2a7f52b83b6e882ca9
 
 build:
   number: 0
