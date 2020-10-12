@@ -10,7 +10,7 @@ source:
   sha256: 2cb2076843feffbbffd9a8d7e87b58f0b430872c083eab2a7f52b83b6e882ca9
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/ICRAR/crc32c
-  license: LGPL-2.0-or-later
+  license: GNU Lesser General Public v2 or later (LGPLv2+)
   license_family: LGPL
   license_file: LICENSE
   summary: A python package exposing the Intel SSE4.2 CRC32C instruction
