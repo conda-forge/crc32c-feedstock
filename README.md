@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/crc32c-feedstoc
 
 Home: https://github.com/ICRAR/crc32c
 
-Package license: GNU Lesser General Public v2 or later (LGPLv2+)
+Package license: LGPL-2.0-or-later
 
 Summary: A python package exposing the Intel SSE4.2 CRC32C instruction
 
