@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f91b144a21eef834d64178e01982bb9179c354b3e9e5f4c803b0e5096384968c
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - python
 
@@ -33,7 +34,7 @@ test:
 
 about:
   home: https://github.com/ICRAR/crc32c
-  license: GNU Lesser General Public v2 or later (LGPLv2+)
+  license: LGPL-2.1-or-later
   license_family: LGPL
   license_file: LICENSE
   summary: A python package exposing the Intel SSE4.2 CRC32C instruction
