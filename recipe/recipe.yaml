@@ -1,0 +1,49 @@
+schema_version: 1
+
+context:
+  name: crc32c
+  version: 2.7.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: f91b144a21eef834d64178e01982bb9179c354b3e9e5f4c803b0e5096384968c
+
+build:
+  number: 2
+  script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed -vv
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: 
+        - python
+        - cross-python_${{ target_platform }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+  host:
+    - pip
+    - python
+    - setuptools
+  run:
+    - python
+
+tests:
+  - python:
+      imports:
+        - crc32c
+      pip_check: true
+
+about:
+  license: LGPL-2.1-or-later
+  license_file: LICENSE
+  summary: A python package exposing the Intel SSE4.2 CRC32C instruction
+  homepage: https://github.com/ICRAR/crc32c
+
+extra:
+  recipe-maintainers:
+    - pinin4fjords
+    - synapticarbors
