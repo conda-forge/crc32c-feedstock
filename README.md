@@ -365,6 +365,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@pinin4fjords](https://github.com/pinin4fjords/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@jhamman](https://github.com/jhamman/)
+
 
