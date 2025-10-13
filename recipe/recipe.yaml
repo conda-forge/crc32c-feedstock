@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: crc32c
-  version: 2.7.1
+  version: "2.7.1.post0"
 
 package:
   name: ${{ name|lower }}
@@ -10,16 +10,16 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f91b144a21eef834d64178e01982bb9179c354b3e9e5f4c803b0e5096384968c
+  sha256: dcaa776413af5790cc55561469cd76306e97b325fe4aa195db535fb3f328e709
 
 build:
-  number: 2
+  number: 0
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed -vv
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
     - ${{ compiler('c') }}
