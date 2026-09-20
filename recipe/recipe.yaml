@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: crc32c
-  version: "2.9"
+  version: "2.9.post0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: d6d2ae0299a417e5fb2e3641838cec34a23778a62fb4ce928792366476c1983b
+  sha256: 6a089e0340de8438e836a09e613c6b541675d0f3aa92b3fe34295aaba62f014f
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed -vv
 
 requirements:
